@@ -3,7 +3,7 @@ import Container from "@/components/Container";
 
 function CheckIcon() {
   return (
-    <span className="badge-tick h-6 w-6 rounded-full bg-[#0e2a22]">
+    <span className="badge-tick h-6 w-6 rounded-full bg-[#15293d]">
       <svg
         aria-hidden="true"
         viewBox="0 0 24 24"
@@ -20,36 +20,36 @@ function CheckIcon() {
 
 export function Hero() {
   return (
-    <section id="top" className="pine-field border-b border-[#0e2a22]">
+    <section id="top" className="navy-field border-b border-[#15293d]">
       <Container className="grid gap-10 py-20 md:grid-cols-2 md:py-28">
         <div>
           <span className="font-body inline-block rounded-full border border-[#f2a93b]/40 bg-[#f2a93b]/10 px-3 py-1 text-xs font-semibold tracking-wide text-[#f2a93b]">
             Now serving Bengaluru
           </span>
-          <h1 className="font-display mt-5 text-[clamp(2.2rem,5vw,3.6rem)] font-semibold leading-[1.08] text-[#f4f6f5]">
+          <h1 className="font-display mt-5 text-[clamp(2.2rem,5vw,3.6rem)] font-semibold leading-[1.08] text-[#f4f6f9]">
             Trusted home services,
             <br />
             booked in minutes.
           </h1>
-          <p className="font-body mt-6 max-w-lg text-lg leading-relaxed text-[#cfdbd4]">
+          <p className="font-body mt-6 max-w-lg text-lg leading-relaxed text-[#c7d4e0]">
             AC repair, deep cleaning, salon at home, plumbing, electrical work and painting —
             pick a slot, tell us the area, and a verified professional shows up at your door.
           </p>
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#booking"
-              className="font-body inline-block rounded-full bg-[#ef8354] px-7 py-3.5 font-semibold text-[#0e2a22] hover:bg-[#f0956c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f4f6f5]"
+              className="font-body inline-block rounded-full bg-[#ef8354] px-7 py-3.5 font-semibold text-[#15293d] hover:bg-[#f0956c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f4f6f9]"
             >
               Book a service
             </a>
             <a
               href="#services"
-              className="font-body inline-block rounded-full border border-[#cfdbd4]/40 px-7 py-3.5 font-semibold text-[#f4f6f5] hover:border-[#cfdbd4] hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f4f6f5]"
+              className="font-body inline-block rounded-full border border-[#c7d4e0]/40 px-7 py-3.5 font-semibold text-[#f4f6f9] hover:border-[#c7d4e0] hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f4f6f9]"
             >
               See all services
             </a>
           </div>
-          <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-[#cfdbd4]">
+          <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-[#c7d4e0]">
             <span className="flex items-center gap-2 font-body">
               <CheckIcon /> Verified professionals
             </span>
@@ -65,19 +65,30 @@ export function Hero() {
           <div className="grid-field absolute inset-0 rounded-3xl opacity-40" />
           <div className="relative grid h-full grid-cols-2 gap-4 p-6">
             {[
-              { label: "AC Repair", time: "Today, 2–4 PM" },
-              { label: "Deep Cleaning", time: "Tomorrow, 9 AM" },
-              { label: "Electrician", time: "Today, 6–8 PM" },
-              { label: "Plumbing", time: "Tomorrow, 12 PM" },
+              { label: "AC Repair", time: "Today, 2–4 PM", image: "/mascots/ac-repair.jpg" },
+              { label: "Deep Cleaning", time: "Tomorrow, 9 AM", image: "/mascots/deep-cleaning.jpg" },
+              { label: "Electrician", time: "Today, 6–8 PM", image: "/mascots/electrician.jpg" },
+              { label: "Plumbing", time: "Tomorrow, 12 PM", image: "/mascots/plumbing.jpg" },
             ].map((card) => (
               <div
                 key={card.label}
-                className="flex flex-col justify-between rounded-2xl border border-white/10 bg-white/[0.06] p-5 backdrop-blur-sm"
+                className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/[0.06] p-4 backdrop-blur-sm"
               >
-                <span className="font-display text-sm font-semibold text-[#f4f6f5]">
-                  {card.label}
-                </span>
-                <span className="font-body mt-6 text-xs text-[#f2a93b]">{card.time}</span>
+                <div className="relative h-44 w-full overflow-hidden rounded-xl bg-[#f4f6f9]">
+                  <Image
+                    src={card.image}
+                    alt={card.label}
+                    fill
+                    sizes="(min-width: 768px) 180px, 50vw"
+                    className="object-contain"
+                  />
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="font-display text-sm font-semibold text-[#f4f6f9]">
+                    {card.label}
+                  </span>
+                </div>
+                <span className="font-body text-xs text-[#f2a93b]">{card.time}</span>
               </div>
             ))}
           </div>
@@ -194,21 +205,21 @@ export const services: Service[] = [
 
 export function Services() {
   return (
-    <section id="services" className="bg-[#eef1ee] py-16 md:py-20">
+    <section id="services" className="bg-[#eef1f5] py-16 md:py-20">
       <Container>
-        <h2 className="font-display text-2xl font-semibold text-[#0e2a22] md:text-3xl">
+        <h2 className="font-display text-2xl font-semibold text-[#15293d] md:text-3xl">
           Our services
         </h2>
-        <p className="font-body mt-2 max-w-2xl text-[#4a5a52]">
+        <p className="font-body mt-2 max-w-2xl text-[#4a5866]">
           Six of our most-booked categories. More services added every month.
         </p>
         <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div
               key={service.id}
-              className="flex flex-col overflow-hidden rounded-2xl border border-[#0e2a22]/10 bg-white shadow-[0_4px_18px_rgba(14,42,34,0.06)]"
+              className="flex flex-col overflow-hidden rounded-2xl border border-[#15293d]/10 bg-white shadow-[0_4px_18px_rgba(21, 41, 61,0.06)]"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#0e2a22]/5">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#15293d]/5">
                 <Image
                   src={service.image}
                   alt={service.name}
@@ -216,24 +227,24 @@ export function Services() {
                   sizes="(min-width: 1024px) 33vw, 50vw"
                   className="object-cover"
                 />
-                <div className="absolute bottom-3 left-3 flex h-11 w-11 items-center justify-center rounded-xl bg-white text-[#0e2a22] shadow-[0_4px_10px_rgba(14,42,34,0.25)]">
+                <div className="absolute bottom-3 left-3 flex h-11 w-11 items-center justify-center rounded-xl bg-white text-[#15293d] shadow-[0_4px_10px_rgba(21, 41, 61,0.25)]">
                   {service.icon}
                 </div>
               </div>
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="font-display text-base font-semibold text-[#0e2a22]">
+                <h3 className="font-display text-base font-semibold text-[#15293d]">
                   {service.name}
                 </h3>
-                <p className="font-body mt-2 flex-1 text-sm text-[#4a5a52]">
+                <p className="font-body mt-2 flex-1 text-sm text-[#4a5866]">
                   {service.description}
                 </p>
-                <div className="mt-4 flex items-center justify-between border-t border-[#0e2a22]/10 pt-4">
-                  <span className="font-body text-xs font-semibold uppercase tracking-wide text-[#4a5a52]">
-                    Starts at <span className="font-display text-base text-[#0e2a22]">{service.priceFrom}</span>
+                <div className="mt-4 flex items-center justify-between border-t border-[#15293d]/10 pt-4">
+                  <span className="font-body text-xs font-semibold uppercase tracking-wide text-[#4a5866]">
+                    Starts at <span className="font-display text-base text-[#15293d]">{service.priceFrom}</span>
                   </span>
                   <a
                     href={`#booking?service=${service.id}`}
-                    className="font-body rounded-full bg-[#0e2a22] px-4 py-2 text-xs font-semibold text-white hover:bg-[#143a2f]"
+                    className="font-body rounded-full bg-[#15293d] px-4 py-2 text-xs font-semibold text-white hover:bg-[#1d3952]"
                   >
                     Book now
                   </a>
@@ -268,19 +279,19 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="border-y border-[#0e2a22]/10 bg-white py-16 md:py-20">
+    <section id="how-it-works" className="border-y border-[#15293d]/10 bg-white py-16 md:py-20">
       <Container>
-        <h2 className="font-display text-2xl font-semibold text-[#0e2a22] md:text-3xl">
+        <h2 className="font-display text-2xl font-semibold text-[#15293d] md:text-3xl">
           How it works
         </h2>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, i) => (
-            <div key={step.title} className="relative rounded-2xl bg-[#eef1ee] p-6">
-              <span className="font-display text-4xl font-semibold text-[#0e2a22]/15">
+            <div key={step.title} className="relative rounded-2xl bg-[#eef1f5] p-6">
+              <span className="font-display text-4xl font-semibold text-[#15293d]/15">
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <h3 className="font-display mt-3 font-semibold text-[#0e2a22]">{step.title}</h3>
-              <p className="font-body mt-1 text-sm text-[#4a5a52]">{step.description}</p>
+              <h3 className="font-display mt-3 font-semibold text-[#15293d]">{step.title}</h3>
+              <p className="font-body mt-1 text-sm text-[#4a5866]">{step.description}</p>
             </div>
           ))}
         </div>
@@ -312,21 +323,21 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="bg-[#eef1ee] py-16 md:py-20">
+    <section className="bg-[#eef1f5] py-16 md:py-20">
       <Container>
-        <h2 className="font-display text-2xl font-semibold text-[#0e2a22] md:text-3xl">
+        <h2 className="font-display text-2xl font-semibold text-[#15293d] md:text-3xl">
           What customers say
         </h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="rounded-2xl border border-[#0e2a22]/10 bg-white p-6 shadow-[0_4px_18px_rgba(14,42,34,0.06)]"
+              className="rounded-2xl border border-[#15293d]/10 bg-white p-6 shadow-[0_4px_18px_rgba(21, 41, 61,0.06)]"
             >
-              <p className="font-body text-sm leading-relaxed text-[#122019]">“{t.quote}”</p>
-              <p className="font-body mt-4 text-sm font-semibold text-[#0e2a22]">
+              <p className="font-body text-sm leading-relaxed text-[#101d29]">“{t.quote}”</p>
+              <p className="font-body mt-4 text-sm font-semibold text-[#15293d]">
                 {t.name}
-                <span className="ml-2 font-normal text-[#4a5a52]">{t.area}</span>
+                <span className="ml-2 font-normal text-[#4a5866]">{t.area}</span>
               </p>
             </div>
           ))}
@@ -361,21 +372,21 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="border-t border-[#0e2a22]/10 bg-white py-16 md:py-20">
+    <section id="faq" className="border-t border-[#15293d]/10 bg-white py-16 md:py-20">
       <Container className="max-w-[900px]">
-        <h2 className="font-display text-2xl font-semibold text-[#0e2a22] md:text-3xl">
+        <h2 className="font-display text-2xl font-semibold text-[#15293d] md:text-3xl">
           Frequently asked questions
         </h2>
         <div className="mt-8 flex flex-col gap-3">
           {faqs.map((item) => (
             <details
               key={item.q}
-              className="faq-item rounded-2xl border border-[#0e2a22]/10 bg-[#eef1ee] p-5"
+              className="faq-item rounded-2xl border border-[#15293d]/10 bg-[#eef1f5] p-5"
             >
-              <summary className="font-display flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-[#0e2a22]">
+              <summary className="font-display flex cursor-pointer items-center justify-between gap-4 text-base font-semibold text-[#15293d]">
                 {item.q}
                 <svg
-                  className="faq-chevron h-5 w-5 flex-shrink-0 text-[#0e2a22]"
+                  className="faq-chevron h-5 w-5 flex-shrink-0 text-[#15293d]"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -385,7 +396,7 @@ export function FAQ() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
                 </svg>
               </summary>
-              <p className="font-body mt-3 text-sm leading-relaxed text-[#4a5a52]">{item.a}</p>
+              <p className="font-body mt-3 text-sm leading-relaxed text-[#4a5866]">{item.a}</p>
             </details>
           ))}
         </div>
@@ -396,9 +407,9 @@ export function FAQ() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#0e2a22]/10 bg-[#eef1ee] py-10">
+    <footer className="border-t border-[#15293d]/10 bg-[#eef1f5] py-10">
       <Container className="text-center sm:text-left">
-        <p className="font-body text-sm text-[#4a5a52]">
+        <p className="font-body text-sm text-[#4a5866]">
           &copy; {new Date().getFullYear()} DoorStep Services. Fictional demo marketplace for a
           training project — not an actual booking platform, and not affiliated with any real
           company.
