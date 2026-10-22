@@ -54,25 +54,25 @@ export default function BookingForm() {
   }
 
   return (
-    <section id="booking" className="pine-field border-y border-[#0e2a22] py-16 md:py-20">
+    <section id="booking" className="navy-field border-y border-[#15293d] py-16 md:py-20">
       <Container className="max-w-[760px]">
-        <h2 className="font-display text-2xl font-semibold text-[#f4f6f5] md:text-3xl">
+        <h2 className="font-display text-2xl font-semibold text-[#f4f6f9] md:text-3xl">
           Book a service
         </h2>
-        <p className="font-body mt-2 text-[#cfdbd4]">
-          Fill this in and we'll send your request to our team on WhatsApp — no account needed.
+        <p className="font-body mt-2 text-[#c7d4e0]">
+          Fill this in and we&apos;ll send your request to our team on WhatsApp — no account needed.
         </p>
 
         <form
           onSubmit={handleSubmit}
           className="mt-8 grid gap-5 rounded-2xl border border-white/10 bg-white/[0.06] p-6 backdrop-blur-sm sm:grid-cols-2"
         >
-          <label className="font-body flex flex-col gap-1.5 text-sm text-[#cfdbd4] sm:col-span-2">
+          <label className="font-body flex flex-col gap-1.5 text-sm text-[#c7d4e0] sm:col-span-2">
             Service
             <select
               value={serviceId}
               onChange={(e) => setServiceId(e.target.value)}
-              className="rounded-lg border border-white/15 bg-[#0e2a22] px-3 py-2.5 text-[#f4f6f5] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
+              className="rounded-lg border border-white/15 bg-[#15293d] px-3 py-2.5 text-[#f4f6f9] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
             >
               {services.map((s) => (
                 <option key={s.id} value={s.id}>
@@ -82,7 +82,7 @@ export default function BookingForm() {
             </select>
           </label>
 
-          <label className="font-body flex flex-col gap-1.5 text-sm text-[#cfdbd4]">
+          <label className="font-body flex flex-col gap-1.5 text-sm text-[#c7d4e0]">
             Date
             <input
               type="date"
@@ -90,16 +90,16 @@ export default function BookingForm() {
               min={todayISO()}
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="rounded-lg border border-white/15 bg-[#0e2a22] px-3 py-2.5 text-[#f4f6f5] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
+              className="rounded-lg border border-white/15 bg-[#15293d] px-3 py-2.5 text-[#f4f6f9] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
             />
           </label>
 
-          <label className="font-body flex flex-col gap-1.5 text-sm text-[#cfdbd4]">
+          <label className="font-body flex flex-col gap-1.5 text-sm text-[#c7d4e0]">
             Time slot
             <select
               value={slot}
               onChange={(e) => setSlot(e.target.value)}
-              className="rounded-lg border border-white/15 bg-[#0e2a22] px-3 py-2.5 text-[#f4f6f5] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
+              className="rounded-lg border border-white/15 bg-[#15293d] px-3 py-2.5 text-[#f4f6f9] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
             >
               {timeSlots.map((s) => (
                 <option key={s} value={s}>
@@ -109,12 +109,12 @@ export default function BookingForm() {
             </select>
           </label>
 
-          <label className="font-body flex flex-col gap-1.5 text-sm text-[#cfdbd4]">
+          <label className="font-body flex flex-col gap-1.5 text-sm text-[#c7d4e0]">
             Area (Bengaluru)
             <select
               value={area}
               onChange={(e) => setArea(e.target.value)}
-              className="rounded-lg border border-white/15 bg-[#0e2a22] px-3 py-2.5 text-[#f4f6f5] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
+              className="rounded-lg border border-white/15 bg-[#15293d] px-3 py-2.5 text-[#f4f6f9] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
             >
               {areas.map((a) => (
                 <option key={a} value={a}>
@@ -124,32 +124,32 @@ export default function BookingForm() {
             </select>
           </label>
 
-          <label className="font-body flex flex-col gap-1.5 text-sm text-[#cfdbd4]">
+          <label className="font-body flex flex-col gap-1.5 text-sm text-[#c7d4e0]">
             Your name
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Optional"
-              className="rounded-lg border border-white/15 bg-[#0e2a22] px-3 py-2.5 text-[#f4f6f5] placeholder:text-[#cfdbd4]/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
+              className="rounded-lg border border-white/15 bg-[#15293d] px-3 py-2.5 text-[#f4f6f9] placeholder:text-[#c7d4e0]/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
             />
           </label>
 
-          <label className="font-body flex flex-col gap-1.5 text-sm text-[#cfdbd4] sm:col-span-2">
+          <label className="font-body flex flex-col gap-1.5 text-sm text-[#c7d4e0] sm:col-span-2">
             Notes
             <textarea
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Anything we should know? (Optional)"
               rows={3}
-              className="rounded-lg border border-white/15 bg-[#0e2a22] px-3 py-2.5 text-[#f4f6f5] placeholder:text-[#cfdbd4]/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
+              className="rounded-lg border border-white/15 bg-[#15293d] px-3 py-2.5 text-[#f4f6f9] placeholder:text-[#c7d4e0]/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f2a93b]"
             />
           </label>
 
           {digits ? (
             <button
               type="submit"
-              className="font-body sm:col-span-2 rounded-full bg-[#ef8354] px-6 py-3.5 font-semibold text-[#0e2a22] hover:bg-[#f0956c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f4f6f5]"
+              className="font-body sm:col-span-2 rounded-full bg-[#ef8354] px-6 py-3.5 font-semibold text-[#15293d] hover:bg-[#f0956c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f4f6f9]"
             >
               Send booking via WhatsApp
             </button>

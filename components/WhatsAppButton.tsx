@@ -14,7 +14,7 @@ export default function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with DoorStep Services on WhatsApp"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-green-700 px-5 py-3 font-semibold text-white shadow-[0_10px_30px_rgba(14,42,34,0.35)] hover:bg-green-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-green-700 px-5 py-3 font-semibold text-white shadow-[0_10px_30px_rgba(21, 41, 61,0.35)] hover:bg-green-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700"
     >
       <svg
         aria-hidden="true"

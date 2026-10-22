@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} ${inter.variable} bg-[#eef1ee] text-[#122019] antialiased`}
+        className={`${spaceGrotesk.variable} ${inter.variable} bg-[#eef1f5] text-[#101d29] antialiased`}
       >
         {children}
       </body>
