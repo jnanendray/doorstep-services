@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+.font-display {
+  font-family: var(--font-space-grotesk), sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* A faint grid of plus-marks, like a service checklist/graph paper.
+   Keeps light panels from reading as flat, empty white. */
+.grid-field {
+  background-image: radial-gradient(circle, rgba(16, 36, 29, 0.16) 1px, transparent 1.4px);
+  background-size: 22px 22px;
+}
+
+/* The deep pine header/hero panel gets a soft upward glow instead of
+   sitting as one flat block of color. */
+.pine-field {
+  position: relative;
+  background-color: #0e2a22;
+  background-image:
+    radial-gradient(ellipse 70% 60% at 85% 0%, rgba(239, 131, 84, 0.22), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 0% 100%, rgba(255, 255, 255, 0.05), transparent 65%);
+}
+
+.badge-tick {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Native <details>/<summary> FAQ: rotate the marker, no JS needed. */
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary {
+  list-style: none;
+}
+
+.faq-item .faq-chevron {
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] .faq-chevron {
+  transform: rotate(180deg);
+}
