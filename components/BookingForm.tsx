@@ -60,7 +60,7 @@ export default function BookingForm() {
           Book a service
         </h2>
         <p className="font-body mt-2 text-[#cfdbd4]">
-          Fill this in and we'll send your request to our team on WhatsApp — no account needed.
+          Fill this in and we&apos;ll send your request to our team on WhatsApp — no account needed.
         </p>
 
         <form
